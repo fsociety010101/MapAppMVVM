@@ -17,6 +17,9 @@ class LocationsViewModel: ObservableObject {
     
     // current location on the map
     @Published var mapLocation: Location {
+        didSet {
+            updateMapRegion(location: mapLocation)
+        }
     }
     
     // current map region
