@@ -8,11 +8,23 @@
 import Foundation
 import MapKit
 
-struct Location {
+struct Location: Identifiable {
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
     let description: String
     let imageNames: [String]
     let link: String
+    
+    var id: String {
+        // name = "CSK"
+        // cityName = Lublin
+        // id = "CSKLublin"
+        name + cityName
+    }
+    
+    /*
+     i created computed variable id instead of UUID, 
+     because if exact same location will be created several times it will be recognised as different places
+     */
 }
