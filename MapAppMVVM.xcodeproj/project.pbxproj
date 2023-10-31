@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		87E4EE5A2AF1716100D17D12 /* MapAppMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4EE592AF1716100D17D12 /* MapAppMVVMApp.swift */; };
 		87E4EE5C2AF1716100D17D12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4EE5B2AF1716100D17D12 /* ContentView.swift */; };
-		87E4EE5E2AF1716500D17D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E4EE5D2AF1716500D17D12 /* Assets.xcassets */; };
 		87E4EE612AF1716500D17D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E4EE602AF1716500D17D12 /* Preview Assets.xcassets */; };
+		87E4EE682AF1727600D17D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E4EE672AF1727600D17D12 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		87E4EE562AF1716100D17D12 /* MapAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E4EE592AF1716100D17D12 /* MapAppMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAppMVVMApp.swift; sourceTree = "<group>"; };
 		87E4EE5B2AF1716100D17D12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87E4EE5D2AF1716500D17D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87E4EE602AF1716500D17D12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87E4EE672AF1727600D17D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			children = (
 				87E4EE592AF1716100D17D12 /* MapAppMVVMApp.swift */,
 				87E4EE5B2AF1716100D17D12 /* ContentView.swift */,
-				87E4EE5D2AF1716500D17D12 /* Assets.xcassets */,
+				87E4EE672AF1727600D17D12 /* Assets.xcassets */,
 				87E4EE5F2AF1716500D17D12 /* Preview Content */,
 			);
 			path = MapAppMVVM;
@@ -125,8 +125,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E4EE682AF1727600D17D12 /* Assets.xcassets in Resources */,
 				87E4EE612AF1716500D17D12 /* Preview Assets.xcassets in Resources */,
-				87E4EE5E2AF1716500D17D12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
