@@ -11,7 +11,7 @@ import SwiftUI
 struct MapAppMVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsView()
         }
     }
 }
