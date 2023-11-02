@@ -23,11 +23,14 @@ class LocationsViewModel: ObservableObject {
         }
     }
     
-    // current map region
+    // current region on map
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     
     // default map span 
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    
+    // show list of locations
+    @Published var showLocationsList: Bool = false
     
     init() {
         // set all locations from api
@@ -47,6 +50,12 @@ class LocationsViewModel: ObservableObject {
                 center: location.coordinates,
                 span: mapSpan
             )
+        }
+    }
+    
+    public func toggleLocationsList() {
+        withAnimation(.easeInOut) {
+            showLocationsList.toggle()
         }
     }
 }
