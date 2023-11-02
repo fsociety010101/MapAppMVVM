@@ -47,6 +47,9 @@ extension LocationsView {
                         .foregroundColor(.primary)
                         .padding()
                 }
+            
+            LocationsListView()
+            
         }
         .background(.thickMaterial)
         .cornerRadius(10)
