@@ -36,6 +36,11 @@ extension LocationsView {
     private var header: some View {
         VStack {
             Text(vm.mapLocation.name + ", " + vm.mapLocation.cityName)
+                .font(.title2)
+                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
                 .overlay(alignment: .leading) {
                     Image(systemName: "arrow.down")
                         .font(.headline)
