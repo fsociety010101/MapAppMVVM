@@ -15,9 +15,10 @@ class LocationsViewModel: ObservableObject {
     // all loaded locations
     @Published var locations: [Location]
     
-    // current location on the map
+    // to track current location on the map
     @Published var mapLocation: Location {
         didSet {
+            // every time i update map region -> current location updates automatically
             updateMapRegion(location: mapLocation)
         }
     }
@@ -29,11 +30,14 @@ class LocationsViewModel: ObservableObject {
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     init() {
+        // set all locations from api
         let locations = LocationsDataService.locations
         self.locations = locations
         
+        //
         self.mapLocation = locations.first!
         
+        // map region to show on map
         self.updateMapRegion(location: locations.first!)
     }
     
