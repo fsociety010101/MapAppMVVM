@@ -26,7 +26,7 @@ class LocationsViewModel: ObservableObject {
     // current region on map
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     
-    // default map span 
+    // default map span
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     // show list of locations
@@ -64,5 +64,28 @@ class LocationsViewModel: ObservableObject {
             mapLocation = location
             showLocationsList = false
         }
+    }
+    
+    public func nextButtonPressed() {
+        
+        // get index of current location
+        guard let currentIndex = locations.firstIndex(where: {$0 == mapLocation}) else {
+            print("Could not find index at locations array!")
+            return
+        }
+        
+        // check if current index is valid
+        let nextIndex = currentIndex + 1
+        guard locations.indices.contains(nextIndex) else {
+            // next index IS NOT valid
+            // restart from 0
+            guard let firstLocation = locations.first else { return }
+            showNextLocation(location: firstLocation)
+            return
+        }
+        
+        // next index IS valid
+        let nextLocation = locations[nextIndex]
+        showNextLocation(location: nextLocation)
     }
 }
