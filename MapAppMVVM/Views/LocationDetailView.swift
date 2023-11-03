@@ -28,13 +28,15 @@ struct LocationDetailView: View {
                     
                     Divider()
                     
-                    
+                    mapLayer
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
             }
         }
         .ignoresSafeArea()
+        .background(.ultraThinMaterial)
+        .overlay(backButton, alignment: .topLeading)
     }
 }
 
@@ -87,7 +89,24 @@ extension LocationDetailView {
                     .shadow(radius: 10)
             }
         }
-        
+            .allowsHitTesting(false)
+            .aspectRatio(1, contentMode: .fit)
+            .cornerRadius(30)
+    }
+    
+    private var backButton: some View {
+        Button {
+            
+        } label: {
+            Image(systemName: "xmark")
+                .font(.headline)
+                .padding(16)
+                .foregroundColor(.primary)
+                .background(.thickMaterial)
+                .cornerRadius(10)
+                .shadow(radius: 4)
+                .padding()
+        }
     }
 }
 
