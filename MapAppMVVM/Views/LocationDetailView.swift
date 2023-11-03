@@ -96,7 +96,7 @@ extension LocationDetailView {
     
     private var backButton: some View {
         Button {
-            
+            vm.sheetLocation = nil
         } label: {
             Image(systemName: "xmark")
                 .font(.headline)
