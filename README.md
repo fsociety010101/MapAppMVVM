@@ -2,7 +2,7 @@
 
 - Custom Data Models
 - MVVM Architecture
-    - Viev Model
+    - View Model
     - ```@StateObject```
     - ```@EnvironmentObject```
 - MapKit
